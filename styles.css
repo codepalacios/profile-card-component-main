@@ -44,6 +44,7 @@ main {
   background-repeat: no-repeat;
   background-size: 100% calc((140 / 16) * 1rem);
   border-radius: 15px;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
 }
 .profile {
   padding-bottom: calc((28 / 16) * 1rem);
