@@ -1,0 +1,110 @@
+:root {
+  --cl-light-sea-green: #19a1ae;
+  --cl-outer-space-crayola: #2e3349;
+  --cl-auro-metal-saurus: #6b7082;
+  --18px: 1.125rem;
+  --14px: 0.875rem;
+  --10px: 0.625rem;
+}
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Mobile styles */
+body {
+  min-height: 100vh;
+  background-color: var(--cl-light-sea-green);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  display: grid;
+  grid-template-columns: minmax(
+    calc((280 / 16) * 1rem),
+    calc((326 / 16) * 1rem)
+  );
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  margin: 0.5rem 0;
+  background-color: #fff;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: 100% calc((140 / 16) * 1rem);
+  border-radius: 15px;
+}
+.profile {
+  padding-bottom: calc((28 / 16) * 1rem);
+  border-bottom: 1px solid #e8e9ec;
+  text-align: center;
+  color: var(--cl-auro-metal-saurus);
+}
+.profile img {
+  display: block;
+  margin-top: calc((87 / 16) * 1rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: calc((24 / 16) * 1rem);
+  border-radius: 100%;
+  border: 5px solid white;
+  width: 96px;
+  height: 96px;
+}
+.profile h1 {
+  margin: 0;
+  font-size: var(--18px);
+  font-weight: 400;
+}
+.profile span {
+  color: var(--cl-outer-space-crayola);
+  font-weight: 700;
+}
+.profile p {
+  margin-top: calc((13 / 16) * 1rem);
+  font-size: var(--14px);
+  font-weight: 400;
+}
+.info {
+  padding: calc((24 / 16) * 1rem) 0;
+  display: flex;
+  justify-content: center;
+  gap: calc((40 / 16) * 1.125rem);
+  color: var(--cl-auro-metal-saurus);
+  text-align: center;
+}
+.info h2 {
+  font-size: var(--18px);
+  color: var(--cl-outer-space-crayola);
+  font-weight: 700;
+  margin-bottom: calc((9 / 16) * 1rem);
+}
+.info p {
+  font-size: var(--10px);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+/* Desktop styles */
+@media (min-width: 425px) {
+  body {
+    background-size: auto;
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+    grid-template-columns: calc((350 / 16) * 1rem);
+  }
+
+  main {
+    margin: 0;
+  }
+}
